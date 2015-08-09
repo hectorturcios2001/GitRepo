@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+<entry key="getVetById">
+    <![CDATA[
+        Select VET.VET_ID, VET.VET_PHOTO, VET.VET_SCORE, PROF.VET_QUAL, PROF.VET_SPCL, PROF.VET_PROFILE_ID, PROF.VET_NAME, PROF.VET_ADDR1, PROF.VET_ADDR2, PROF.VET_ADDR3, PROF.VET_CITY, PROF.VET_PINCODE, PROF.VET_STATE 
+        From VET_MAIN VET INNER JOIN VET_PROFILE PROF ON VET.VET_PROFILE_ID = PROF.VET_PROFILE_ID 
+        WHERE VET.VET_ID =?     
+    ]]>
+
+</entry>    
+<entry key="insertNewVetMain">
+    <![CDATA[
+		INSERT INTO `vecpel1`.`VET_MAIN` (`VET_ID`, `VET_PROFILE_ID`, `VET_PHOTO`, `VET_SCORE`) VALUES (?, ?, ?, ?);
+    ]]>
+</entry>
+
+<entry key="insertNewVetProfile">
+    <![CDATA[
+		INSERT INTO `vecpel1`.`VET_PROFILE` (`VET_PROFILE_ID`, `VET_NAME`, `VET_ADDR1`, `VET_ADDR2`, `VET_ADDR3`, `VET_CITY`, `VET_PINCODE`, `VET_STATE`, `VET_QUAL`, `VET_SPCL`) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?);
+    ]]>
+</entry>
+
+<entry key="getAllVets">
+    <![CDATA[
+        Select VET.VET_ID, VET.VET_PHOTO, VET.VET_SCORE, PROF.VET_QUAL, PROF.VET_SPCL, PROF.VET_PROFILE_ID, PROF.VET_NAME, PROF.VET_ADDR1, PROF.VET_ADDR2, PROF.VET_ADDR3, PROF.VET_CITY, PROF.VET_PINCODE, PROF.VET_STATE 
+        From VET_MAIN VET INNER JOIN VET_PROFILE PROF ON VET.VET_PROFILE_ID = PROF.VET_PROFILE_ID      
+    ]]>
+
+</entry> 
+
+</properties>
